@@ -25,19 +25,18 @@ class MainActivity : AppCompatActivity() {
         // TODO Step 4: Change TextView's text size to the number selected in the Spinner */
         spinner.onItemSelectedListener = object: OnItemSelectedListener,
             AdapterView.OnItemSelectedListener {
-            override fun onNavigationItemSelected(item: MenuItem): Boolean {
-                TODO("Not yet implemented")
-            }
-
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 p1?.run{
-                    val nums = p2.
-
+                    val nums = p2
                     displayTextView.setTextSize(nums.toFloat())
                 }
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
+            }
+
+            override fun onNavigationItemSelected(item: MenuItem): Boolean {
+                TODO("Not yet implemented")
             }
         }
 
